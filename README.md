@@ -78,6 +78,7 @@ git clone https://github.com/spkumawat/Finmo-Assignment.git
 
 2. Install dependencies:
 cd <project_folder>
+
 npm install
 
 ### Running the Application
