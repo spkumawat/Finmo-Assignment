@@ -67,7 +67,7 @@ By completing this assignment, you'll create a robust system for managing curren
 Before running this application, make sure you have the following installed:
 
 - Node.js and npm (or yarn)
-- MongoDB or any other supported database
+
 
 ### Installation
 
