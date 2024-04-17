@@ -79,12 +79,12 @@ git clone https://github.com/spkumawat/Finmo-Assignment.git
 2. Install dependencies:
 cd <project_folder>
 
-npm install
+  npm install
 
 ### Running the Application
 
 To start the application in development mode, run:
-npm run start:dev
+  npm run start:dev
 
 ### File Structure
 ![file structure](https://raw.githubusercontent.com/spkumawat/Finmo-Assignment/main/Screenshot%20(312).png)
