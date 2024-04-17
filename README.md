@@ -86,5 +86,9 @@ npm install
 To start the application in development mode, run:
 npm run start:dev
 
+### File Structure
+![file structure](https://raw.githubusercontent.com/spkumawat/Finmo-Assignment/main/Screenshot%20(312).png)
+
+
 
 
