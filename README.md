@@ -1,73 +1,89 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# NestJS Application
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Welcome to the Forex Trading System backend engineering assignment! This project aims to develop a Forex Trading System using Nest.js. The objective is to implement various APIs enabling users to:
 
-## Installation
+1. Top up their account
+2. Fetch live FX conversion rates
+3. Perform FX conversions
+4. Check their account balances
 
-```bash
-$ npm install
-```
+By completing this assignment, you'll create a robust system for managing currency transactions and account balances.
 
-## Running the app
+## Features
 
-```bash
-# development
-$ npm run start
+1. **FX Rate Syncing Application**:
+   - Fetches live FX conversion rates from alphavantage.co.
+   - Stores rates in memory with a validity of 30 seconds.
+   - Smart storage system maintains the most relevant FX rates.
 
-# watch mode
-$ npm run start:dev
+2. **API Endpoints**:
+   - **Top Up Account API**:
+     - Endpoint: POST /accounts/topup
+     - Allows users to add funds to their account in a specified currency.
+   - **FX Rate API**:
+     - Endpoint: GET /fx-rates
+     - Fetches live FX conversion rates stored in memory from Step 1.
+     - Generates a quoteId and sends it in the response.
+   - **FX Conversion API**:
+     - Endpoint: POST /fx-conversion
+     - Performs FX conversion using the provided quoteId.
+     - Converts a specified amount from one currency to another.
+   - **Balance API**:
+     - Endpoint: GET /accounts/balance
+     - Retrieves the balances in all currencies for the user's account.
 
-# production mode
-$ npm run start:prod
-```
+3. **Quote Management**:
+   - Efficiently handles quote generation and expiration.
+   - Ensures accurate and timely FX conversions based on provided quotes.
 
-## Test
+4. **Account Management**:
+   - Tracks account balances across multiple currencies.
+   - Enables users to top up their accounts and check balances seamlessly.
 
-```bash
-# unit tests
-$ npm run test
+5. **Error Handling**:
+   - Provides clear error messages and status codes for API requests.
+   - Handles edge cases such as invalid input or expired quotes gracefully.
 
-# e2e tests
-$ npm run test:e2e
+6. **Security**:
+   - Implements secure communication protocols (HTTPS) for API endpoints.
+   - Enforces authentication and authorization mechanisms to protect user data.
 
-# test coverage
-$ npm run test:cov
-```
+7. **Documentation**:
+   - Provides comprehensive API documentation for easy integration and usage.
+   - Includes examples and explanations of request and response formats.
 
-## Support
+8. **Testing**:
+   - Implements unit tests to ensure the reliability and correctness of API endpoints.
+   - Conducts integration tests to validate the system's behavior under various scenarios.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Getting Started
 
-## License
+### Prerequisites
 
-Nest is [MIT licensed](LICENSE).
+Before running this application, make sure you have the following installed:
+
+- Node.js and npm (or yarn)
+- MongoDB or any other supported database
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/spkumawat/Finmo-Assignment.git
+
+
+
+2. Install dependencies:
+cd <project_folder>
+npm install
+
+### Running the Application
+
+To start the application in development mode, run:
+npm run start:dev
+
+
+
